@@ -1,0 +1,30 @@
+ALGORITHM Counting
+
+VAR sen:STRING;
+    c,len,nvowels:INTEGER:=0;
+    nwords:INTEGER:=1;
+
+BEGIN
+
+Read (sen)
+
+WHILE (sen<>".") DO
+
+    IF (sen=" ") THEN
+        nwords:=nwords+1;
+
+    ELSE_IF (sen="a","e","u","o","i",) THEN
+        nvowels:=nvowels+1;
+
+    ELSE
+        c:=c+1;
+
+    END_IF
+END_WHILE
+
+len:=c+nvowels+nwords;
+
+write (len,nwords,nvowels)
+
+END
+
